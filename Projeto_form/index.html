@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venda Seu Carro</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <header>
+        <section class="header">
+            <div class="menu">
+                <h2>Cadastre aqui seu veículo para venda!</h2>
+            </div>
+        </section>
+    </header>
+    <!--Fim do Header-->
+    <!--Formulário.-->
+    <main>
+        <form>
+
+            <section class="container-form">
+                <!--Container do Form-->
+                <div class="container">
+                    <!--Aqui começa o Form.-->
+                    <div class="head-form">
+                       <div class="aux"> <h3>Formulário</h3></div>
+                    </div>
+                    <div class="form-infos">
+                        <div class="head-info">
+                            <h1>Venda fácil seu carro!</h1>
+                            <h6>Descreva as características e marque os opcionais que seu veículo possui:</h6>
+                        </div><!--head-info-->
+                            <div class="labels">
+                                <label for="title">Título do anúncio: *</label>
+                                <input type="text" name="title" placeholder="Um título para anunciar seu carro" required></div>
+                            <div class="labels">
+                                <label for="price">Preço: *</label>
+                                <input type="text" name="price" placeholder="Defina o preço" required>
+                            <div class="labels">
+                                <label for="description">Descrição: *</label>
+                                <textarea name="description" placeholder="Aqui você coloca detalhes do seu veículo. Por exemplo: se ele possui avarias ou similaridades." required></textarea>                            <div class="labels">    
+                                <label for="brand">Marca: *</label>
+                                <input type="text" name="brand" placeholder="Marca do seu carro" required></div>
+                            <div class="labels">
+                                <label for="model">Modelo: *</label>
+                                <input type="text" name="model" placeholder="Modelo do seu carro" required></div>
+                            <div class="labels">   
+                                <label for="title">Quilometragem: *</label>
+                                <input type="text" name="title" placeholder="Quilometragem do seu carro" required></div>
+                            <div class="labels">
+                                <label for="fab">Ano de Fabricação: *</label>
+                                <input type="number" name="fab" min="1980" max="2024" placeholder="Digite o ano de Fabricação" required></div>
+                            <div class="labels">
+                                <label for="mod">Ano do Modelo: *</label>
+                                <input type="number" name="mod" min="1980" max="2024" placeholder="Digite o ano do Modelo" required></div>
+                        
+                                    <div class="transmission">
+                                        <!--Uso da input radio, atenção para o correto nome das labels.-->
+                                        <label for="transmission">Tipo de câmbio: *</label>
+                                        <!--cada input possui sua label, que juntos pertencem a label transmission-->
+                                        <div class="transmission-opt">
+                                        <input type="radio" name="transmission" value="automatic" required>
+                                        <label for="automatic">Automático</label>
+                                        <input type="radio" name="transmission" value="manual" required>
+                                        <label for="manual">Manual</label>
+                                        </div>
+                                    </div><!--Transmission-->
+
+                                <!--Options-->
+                                <div class="options">
+                                    <label for="opt">Opcionais:</label>
+                                    <div class="opts">
+                                    <label>
+                                        <input type="checkbox" name="opt1" id="checkbox1">
+                                        Airbag</label>
+                                    <label>
+                                        <input type="checkbox" name="opt2" id="checkbox2">
+                                        Alarme</label>
+                                    <label>
+                                        <input type="checkbox" name="opt3" id="checkbox3">
+                                        Ar Condicionado</label>
+                                    <label>
+                                        <input type="checkbox" name="opt4" id="checkbox4">
+                                        Camera de Ré</label>
+                                    <label>
+                                        <input type="checkbox" name="opt5" id="checkbox5">
+                                        Assistente de Pista</label>
+                                    <label>
+                                        <input type="checkbox" name="opt6" id="checkbox6">
+                                        Partida Keyless</label>
+                                    <label>
+                                        <input type="checkbox" name="opt7" id="checkbox7">
+                                        Integração com o Celular</label>
+                                    <label>
+                                        <input type="checkbox" name="opt8" id="checkbox8">
+                                        Banco de Couro</label>
+                                    </div>
+                                </div><!--Options-->
+                                <!--Fotos do Carro-->
+                                <div class="pic">
+                                    <label for="pic">Insira fotos do carro: *</label>
+                                    <input type="file" name="imagem" accept="image/*">
+                                </div>   <!--Fotos do Carro--> 
+
+                        </div><!--labels-->
+
+                    </div><!--form-infos-->
+                    <div class="buttons">
+                        <div class="submit"> 
+                            <input type="submit" value="Cadastrar" name="submit"/>
+                        </div><!--Submit-->
+                        <div class="reset"> 
+                            <input type="reset" value="Limpar" name="reset"/>
+                        </div><!--Reset-->
+                     </div><!--Buttons-->
+
+                </div>
+
+            </section>
+
+
+        </form>
+    </main>
+    
+    
+</body>
+</html>

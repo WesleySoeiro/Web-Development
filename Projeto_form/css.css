@@ -1,0 +1,142 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial, sans-serif;
+}
+.header{
+    background-color: #673ab7;
+    color: #FFF;
+    height: 150px;
+}
+.menu h2{
+    padding: 20px;
+    color: #fef;
+}
+h1, h2,h3,h4,h5,h6{
+    color: #333;
+}
+.container-form{
+    height: 1150px;
+    background-color: #f0ebf8;
+    position: relative;
+}
+.container{
+    position: absolute;
+    background-color: #FFF;
+    height: 1150px;
+    width: 50%;
+    margin-top: -50px;
+    margin-left: 200px;
+}
+.head-form{
+    border-bottom: 1px solid #dfdfdf;
+    height: 45px;
+}
+.aux{
+    width: 30%;
+    margin: 0 auto;
+}
+.head-form h3{
+    text-align: center;
+    width: 100px;
+    padding: 3px 0;
+    border-bottom: 2px solid #673ab7;
+    color: #673ab7;
+    line-height: 37px;
+    }
+.head-form h4{
+    font-weight: normal;
+}
+.form-infos{
+    margin: 15px;   
+}
+.head-info h6{
+    padding: 10px 0;
+}
+.labels{
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    padding: 9px 0;
+    color: #444;
+}
+.labels input,
+.labels textarea{
+    resize: none;
+    outline: none;
+    border: 1px transparent;
+    margin: 8px 0;
+    border-bottom: 1px solid #CCC;
+    padding-bottom: 5px;
+    }
+.labels textarea{height: 55px;}
+
+.transmission{
+    display: inline-block;
+}
+.transmission-opt{
+    margin: 10px 20px;
+    padding: 0 5px;
+}
+.transmission input[type="radio"] {
+    margin-right: 2px;
+}
+.transmission input[type="radio"]:checked,
+.transmission input[type="radio"]:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(51, 51, 51, 0.5)
+}
+.opts{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    font-size: 14px;
+    padding: 10px 20px;
+}
+
+.opts label {
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+    width: 200px;
+}
+.opts input[type="checkbox"]{
+    border-radius: 50px;
+    margin: 0 5px 0 0;
+}
+
+.pic{
+    margin: 20px 0;
+}
+.pic input{
+    margin: 15px 20px;
+}
+.buttons{
+    margin-top: -30px;
+}
+
+.submit,
+.reset{
+    display: flex;
+    justify-content: center;
+    padding: 3px 0px;
+}
+.submit input,
+.reset input{
+    background-color: #673ab7;
+    color: #FFF;
+    border-radius: 20px;
+    border: 1px transparent;
+    padding: 3px 5px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.submit input:hover,
+.reset input:hover {
+    background-color: #ffffff;
+    border: #673ab7;
+    color: #673ab7;
+    
+}
