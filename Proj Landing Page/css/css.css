@@ -3,11 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     transition: 0.5s;
-    max-height: 750px;
-}
-
-.empty{
-    display:none;
 }
 
 :root{
@@ -21,30 +16,29 @@
 }
 
 
-
-html{
+html, body, main{
+    min-height: 100vh;
     background-color: var(--black);
-    max-width: 100%;
 }
 
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: transparent; 
-    height: 100vh;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    min-height: 100vh;
+    display: grid;
 }
 
-main {
-    min-height: calc(100vh);
-    margin: 0 0 10% 0;
+nav{
+    order: 1;
 }
 
+main{
+    order: 2;
+}
 
+footer{
+    order: 3;
+}
 
 .menu{
     transition: 0.5s;
@@ -79,6 +73,7 @@ main {
     display: grid;
     grid-template-columns: 50% auto;
     grid-template-rows: auto 70%;
+    
 }
 
 .main-title{
@@ -120,9 +115,10 @@ strong{
 
 .buttons{    
     order: 3;
+    width: 90%;
+    margin-left: 25%;
     gap: 1rem;
     padding: 0;
-    margin: 0 0 10% 25%;
     
 }
 
@@ -183,7 +179,7 @@ strong{
 
 .img img{
     width: 80%;
-    height: 500%;
+    height: 80%;
     margin-top: 15%;
 }
 
@@ -210,32 +206,32 @@ strong{
     color: var(--black);
     background-color: var(--azul);
     }
-.empty{
-    order: 4;
 
+
+    .empty{
+    order: 4;
 }
 
 
 @media screen and (max-width: 484px) {
+    
     .menu{
         margin: 4% 0 0 8%;
         padding: 0;
     }
 
     .container{
-        grid-template-columns: 1fr;
+        grid-template-columns: 100%;
     }
 
     .img{
         order: 1;
-        grid-row: span 1;
         text-align: center;
-        
-    }
+        }
 
     .img img{
-        width: 80%;
-        height: 80%;
+        width: 60%;
+        height: 60%;
     }
 
     .text{
@@ -257,8 +253,8 @@ strong{
 
     .buttons{
         order: 3;
-        margin: 0 0 10% 10%;
-        width: 100%;
+        margin-left: 15%;
+        width: 85%;
     }
 
     .buttons h3{
@@ -267,22 +263,28 @@ strong{
     }
     .cont-footer{
         order: 4;
-        grid-column: span 1;
         margin-top: 20%;
     }
+.empty{
+    display: none;
+}
+
 }
 
 
 
 @media screen and (min-width: 485px) and (max-width: 768px){
 
+    body{
+        grid-template-rows: auto;
+    }
     .menu{
         margin: 4% 0 0 8%;
         padding: 0;
     }
 
     .container{
-        grid-template-rows: 80% auto;
+        grid-template-rows: auto;
         grid-template-columns: 100%;
     }
 
@@ -324,13 +326,17 @@ strong{
 
     .cont-footer{
         bottom: 0;
-        margin-top: 60%;
     }
 
 }   
 
 
 @media screen and (min-width: 768px) and (max-width: 1435px) {
+
+    .container{
+        grid-template-rows: auto 40%;
+        height: 100%;
+    }
 
     .menu{
         margin: 1% 0 0 1%;
@@ -362,4 +368,4 @@ strong{
         font-size: 14px;
     }
 
-}
+} 
