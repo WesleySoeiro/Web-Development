@@ -49,7 +49,7 @@ main {
     display: flex;
     gap: 29px;
     text-align: center;
-    width: 100%;
+    width: 90%;
 }
 
 .menu a{
@@ -73,7 +73,7 @@ main {
     transition: 0.9s;
     display: grid;
     grid-template-columns: 50% auto;
-    grid-template-rows: auto;
+    grid-template-rows: auto 70%;
 }
 
 .main-title{
