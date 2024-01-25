@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     transition: 0.5s;
-    max-height: 750px;
 }
 
 :root{
