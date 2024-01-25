@@ -277,7 +277,8 @@ strong{
     }
 
     .container{
-        grid-template-columns: 1fr;
+        grid-template-rows: 80% auto;
+        grid-template-columns: 100%;
     }
 
     .img{
@@ -300,11 +301,13 @@ strong{
     }
 
     .text h1 {
+        padding: 15% 0 10% 0;
         font-size: 20px;
         line-height: 40px;
     }
 
     .text h4 {
+        padding: 0% 0 10% 0;
         font-size: 12px;
         line-height: 30px;
     }
@@ -317,7 +320,7 @@ strong{
     .cont-footer{
         order: 4;
         grid-column: span 1;
-        margin-top: 20%;
+        bottom: 0;
     }
 
 }   
