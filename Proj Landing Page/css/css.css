@@ -120,9 +120,9 @@ strong{
 
 .buttons{    
     order: 3;
-    margin-left: 25%;
     gap: 1rem;
     padding: 0;
+    margin: 0 0 10% 25%;
     
 }
 
