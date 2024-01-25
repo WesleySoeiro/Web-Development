@@ -17,7 +17,6 @@
 }
 
 
-/*Header*/
 
 html{
     background-color: var(--black);
@@ -29,21 +28,28 @@ body {
     padding: 0;
     box-sizing: border-box;
     background-color: transparent; 
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-.container {
-    min-height: calc(100vh - 80px); 
-    padding-bottom: 80px; 
+main {
+    min-height: calc(100vh);
 }
+
+
 
 .menu{
     transition: 0.5s;
-    margin: 2rem 5rem;
+    margin: 2% 0 0 3%;
     padding: 1rem 3rem 1rem 5rem;
     font-size: 20px;
     display: flex;
     gap: 29px;
     text-align: center;
+    width: 100%;
 }
 
 .menu a{
@@ -61,13 +67,13 @@ body {
     transition: 0.5s;
 }
 
-/*Main*/
+
 
 .container{
     transition: 0.9s;
-    position: relative;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 50% auto;
+    grid-template-rows: auto;
 }
 
 .main-title{
@@ -80,10 +86,13 @@ body {
     font-weight: 400;
 }
 .text{
-    padding: 4rem 3rem 1rem 5rem;
-    width: 45rem;
+    order: 1;
+    grid-column: span 1;
+    align-content: center;
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 15%;
     color: var(--branco);
-    margin: 0 5rem;
 }
 
 .text h1{
@@ -105,24 +114,24 @@ strong{
 }
 
 .buttons{    
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+    order: 3;
+    margin-left: 25%;
     gap: 1rem;
-    padding: 1rem 2rem;
+    padding: 0;
     
 }
 
 .buttons h3{
     font-family: var(--mont);
     padding: 1rem 0;
+    color: var(--branco);
 }
 
 .fab-buttons{
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    padding: 0 0 0 3rem;
+    padding: 5% 0 0 0;
 }
 
 
@@ -134,7 +143,7 @@ strong{
     font-family: var(--mont);
     font-size: 20px;
     font-weight: normal;
-    width: 20rem;
+    width: 60%;
     height: 3rem;
     line-height: 2.5rem;
     justify-content: center;
@@ -162,599 +171,188 @@ strong{
     transition: 0.5s;
 }
 
+.img{
+    order: 2;
+    grid-row: span 2;
+}
+
 .img img{
-    width: 30rem;
-    height: 30rem;
-    margin-top: 10%;
-    margin-left: 27.5%;
+    width: 80%;
+    height: 500%;
+    margin-top: 15%;
 }
 
 
-/* Footer  */
-
 .cont-footer{
-    display: flex;
+    order: 5;
+    grid-column: span 2;
+    bottom: 0.1%;
     justify-content: space-around;
-    flex-direction: column;
-    position:sticky ;
-    line-height: 40px;
+    line-height: 20px;
     background-color: var(--azul);
-    height: 80px;
+    height: auto;
     width: 100%;
-    align-items: center;
+    text-align: center;
+    margin-top: 10%;
 }
 
 
 .creditos{
+    margin: 0;
     font-family: var(--mont);
     font-weight: 400px;
+    font-size: 18px;
     color: var(--black);
     background-color: var(--azul);
-    height: 40px;
- }
-
-@media screen and (max-width: 415px){
-    body{
-        max-width: 360px;
-        max-height: 778px;
     }
+.empty{
+    order: 4;
 
-    .container{
-        flex-direction: column-reverse;
-    }
-    
+}
+
+
+@media screen and (max-width: 484px) {
     .menu{
-        padding: 1rem 10% 1rem 15%;
-        font-size: 16px;
-        margin: 2rem 0 0 1rem;
-        gap: 5px;
-    }
-    
-    .menu a {
-        width: 20rem;
-        height: 2.5rem;
-        line-height: 2.3rem;
-        border: 0.5px solid var(--azul);
-    }
-
-    .img img{
-        width: 70%;
-        height: 70%;
-        margin-top: 10%;
-        margin-bottom: 1rem;
-        margin-left: 10%;
-    }
-
-    .text{
-        padding: 1rem 30% 1rem 10%;
-        margin: 0 0 0 2rem;
-        width: 120%;
-        }
-
-    .text h1{
-        font-size: 16px;
-        line-height: 20px;
-    }
-
-    .text h4{
-        font-size: 12px;
-        line-height: 14px;
-    }
-
-    .fab-buttons{
+        margin: 4% 0 0 8%;
         padding: 0;
     }
 
-    .buttons{
-        align-items: center;
-    }
-
-    .buttons h3{
-        font-size: 16px;
-        font-weight: 400;
-    }
-
-    .instagram,
-    .github,
-    .linkedin {
-        padding: 0;
-        font-size: 16px;
-        width: 160%;
-        height: 2.5rem;
-        line-height: 2.2rem;
-    }
-
-    .fab-buttons{
-        margin-left: -25%;
-    }
-
-    /* Footer */
-
-
-    .cont-footer{
-        line-height: 30px;
-        height: 30px;
-        width: 130%;
-    }
-
-    .creditos{
-        margin-left: -5%;
-        line-height: 15px;
-        height: 15px;
-        font-size: 8px;
-    }
-}
-
-@media screen and (min-width: 415px) and (max-width: 519px) {
-    
-    body{
-        max-width: 480px;
-        max-height: 780px;
-    }
-
-    .menu{
-        padding: 1rem 3rem 1rem 2rem;
-        font-size: 24px;
-        margin: 1rem 2rem;
-        gap: 24px;
-    }
-
     .container{
-        flex-direction: column-reverse;
-    }
-
-    .menu a{
-        width: 8rem;
-        height: 3rem;
-        line-height: 2.5rem; 
-    }
-
-    .img img{
-        width: 20rem;
-        height: 20rem;
-        margin-top: 10%;
-        margin-bottom: 3rem;
-        margin-left: 5rem;
-    }
-
-    .text{
-        padding: 1rem 8rem 1rem 1rem;
-        margin: 0 0 0 3rem;
-        width: 33rem;
-    }
-
-    .text h1{
-        font-size: 28px;
-    }
-
-    .text h4{
-        font-size: 20px;
-    }
-
-    .buttons{
-        align-items: center;
-        margin-left: -10%;
-    }
-
-    .buttons h3{
-        font-size: 20px;
-        font-weight: 400;
-    }
-
-    .instagram,
-    .github,
-    .linkedin {
-        font-size: 14px;
-        width: 15rem;
-    }
-
-    .fab-buttons{
-        margin-left: -15%;
-    }
-
-    /* Footer */
-
-
-    .cont-footer{
-        background-color: var(--azul);
-        line-height: 50px;
-        height: 50px;
-        width: 150%;
-        align-items: center;
-    }
-
-    .creditos{
-        margin-left: -15%;
-        line-height: 25px;
-        height: 25px;
-        font-size: 12px;
-    }
-    
-
-}
-
-@media screen and (min-width: 519px) and (max-width: 820px) {
-    /* Estilos para telas menores, como smartphones */
-
-    body{
-        max-width: 695px;
-        max-height: 950px;
-    }
-
-
-    .container{
-        flex-direction: column-reverse;
-    }
-
-    .img img{
-        width: 28rem;
-        height: 28rem;
-        margin-top: 6%;
-        margin-bottom: 3rem;
-        margin-left: 4rem;
-    }
-
-    .menu{
-        padding: 1rem 3rem 1rem 2rem;
-        font-size: 20px;
-        margin: 2rem 2rem 0;
-        gap: 24px;
-    }
-
-    .menu a {
-        width: 9rem;
-        height: 4rem;
-        line-height: 3.5rem;
-    }
-
-    .text{
-        padding: 1rem 8rem 1rem 0rem;
-        margin: 0 0 0 3rem;
-        width: 38rem;
-    }
-
-    .text h1{
-        font-size: 28px;
-        margin-bottom: 1rem;
-    }
-
-    .text h4{
-        font-size: 20px;
-    }
-
-    .buttons{
-        align-items: center;
-    }
-
-    .buttons h3{
-        font-size: 20px;
-        font-weight: 400;
-    }
-
-    .instagram,
-    .github,
-    .linkedin {
-        font-size: 14px;
-        width: 15rem;
-    }
-    
-    
-    /* Footer */
-
-    .cont-footer{
-        line-height: 50px;
-        height: 50px;
-        width: 115%;
-    }
-
-    .creditos{
-        line-height: 25px;
-        height: 25px;
-        font-size: 14px;
-    }
-}
-
-@media screen and (min-width: 820px) and (max-width: 930px) {
-    /* Estilos para telas médias, como tablets */
-
-    body{
-        max-width: 800px;
-        max-height: 780px;
-    }
-
-    .menu{
-        margin: 2rem 2rem;
-        padding: 1rem 3rem 1rem 3rem;
-        font-size: 18px;
-        margin: 2rem 0rem;
-        gap: 24px;
-    }
-
-    .img img{
-        width: 23rem;
-        height: 23rem;
-        margin-top: 5%;
-        margin-left: -20%;
-        
-    }
-    .menu a{
-        width: 8rem;
-        height: 3rem;
-        line-height: 2.5rem; 
-    }
-
-    .text{
-        padding: 1rem 10rem 1rem 3rem;
-        margin: 0 0 0 0rem;
-        width: 33rem;
-    }
-
-    .text h1{
-        font-size: 25px;
-    }
-
-    .text h4{
-        font-size: 18px;
-    }
-
-    .buttons{
-        align-items: flex-end;
-    }
-
-    .buttons h3{
-        font-size: 20px;
-        font-weight: 400;
-    }
-
-    .instagram,
-    .github,
-    .linkedin {
-        font-size: 14px;
-        width: 15rem;
-    }
-
-    /* Footer */
-
-    .cont-footer{
-        line-height: 50px;
-        height: 50px;
-        width: 120%;
-    }
-
-    .creditos{
-        line-height: 25px;
-        height: 25px;
-        font-size: 18px;
-    }
-
-}
-
-@media screen and (min-width: 930px) and (max-width: 1100px) {
-
-    body{
-        max-width: 1000px;
-        max-height: 780px;
-    }
-
-    .menu{
-        margin: 2rem 2rem;
-        padding: 1rem 3rem 1rem 3rem;
-        font-size: 18px;
-        margin: 2rem 0rem;
-        gap: 24px;
-    }
-
-    .img img{
-        width: 25rem;
-        height: 25rem;
-        margin-top: 5%;
-        margin-left: 5%;
-        
-    }
-    .menu a{
-        width: 8rem;
-        height: 3rem;
-        line-height: 2.5rem; 
-    }
-
-    .text{
-        padding: 1rem 5rem 1rem 3rem;
-        margin: 0 0 0 0rem;
-        width: 33rem;
-    }
-
-    .text h1{
-        font-size: 25px;
-        line-height: 35px;
-    }
-
-    .text h4{
-        font-size: 18px;
-        line-height: 35px;
-    }
-
-    .buttons{
-        align-items: flex-end;
-    }
-
-    .buttons h3{
-        font-size: 20px;
-        font-weight: 400;
-    }
-
-    .instagram,
-    .github,
-    .linkedin {
-        font-size: 14px;
-        width: 15rem;
-    }
-
-    /* Footer */
-
-    .cont-footer{
-        line-height: 50px;
-        height: 50px;
-        width: 130%;
-    }
-
-    .creditos{
-        line-height: 25px;
-        height: 25px;
-        font-size: 18px;
-    }
-
-}
-
-@media screen and (min-width: 1100px) and (max-width: 1250px) {
-
-    body{
-        max-width: 1100px;
-        max-height: 780px;
-    }
-
-    .menu{
-        margin: 2rem 2rem;
-        padding: 1rem 3rem 1rem 3rem;
-        font-size: 18px;
-        margin: 2rem 0rem;
-        gap: 24px;
-    }
-
-    .img img{
-        width: 30rem;
-        height: 30rem;
-        margin-top: 5%;
-        margin-left: 20%;
-        
-    }
-    .menu a{
-        width: 8rem;
-        height: 3rem;
-        line-height: 2.5rem; 
-    }
-
-    .text{
-        padding: 1rem 2rem 1rem 3rem;
-        margin: 0 0 0 0rem;
-        width: 33rem;
-    }
-
-    .text h1{
-        font-size: 25px;
-        line-height: 35px;
-    }
-
-    .text h4{
-        font-size: 18px;
-        line-height: 35px;
-    }
-
-    .buttons h3{
-        font-size: 20px;
-        font-weight: 400;
-    }
-
-    .instagram,
-    .github,
-    .linkedin {
-        font-size: 14px;
-        width: 15rem;
-    }
-
-    /* Footer */
-
-    .cont-footer{
-        line-height: 50px;
-        height: 50px;
-        width: 115%;
-    }
-
-    .creditos{
-        line-height: 25px;
-        height: 25px;
-        font-size: 18px;
-    }
-
-}
-
-@media screen and (min-width: 1250px) and (max-width: 1400px) {
-
-    body{
-        max-width: 1400px;
-        max-height: 780px;
-    }
-
-    .menu{
-        margin: 2rem 2rem;
-        padding: 1rem 3rem 1rem 3rem;
-        font-size: 18px;
-        margin: 2rem 3rem;
-        gap: 24px;
-    }
-
-    .img img{
-        width: 30rem;
-        height: 30rem;
-        margin-top: 5%;
-        margin-left: 31%;    
-    }
-    .menu a{
-        width: 8rem;
-        height: 3rem;
-        line-height: 2.5rem; 
-    }
-
-    .text{
-        padding: 1rem 2rem 1rem 3rem;
-        margin: 0 0 0 3rem;
-        width: 33rem;
-    }
-
-    .text h1{
-        font-size: 25px;
-        line-height: 35px;
-    }
-
-    .text h4{
-        font-size: 18px;
-        line-height: 35px;
-    }
-
-    .buttons h3{
-        font-size: 20px;
-        font-weight: 400;
-    }
-
-    .instagram,
-    .github,
-    .linkedin {
-        font-size: 14px;
-        width: 15rem;
-    }
-
-    /* Footer */
-
-    .cont-footer{
-        line-height: 50px;
-        height: 50px;
-        width: 115%;
-    }
-
-    .creditos{
-        line-height: 25px;
-        height: 25px;
-        font-size: 18px;
-    }
-
-}
-
-
-@media screen and (min-width: 1401px) {
-    .menu{
-        margin: 2rem 0rem;
+        grid-template-columns: 1fr;
     }
 
     .img{
-        margin-left: -10%;
+        order: 1;
+        grid-row: span 1;
+        text-align: center;
+        
     }
+
+    .img img{
+        width: 80%;
+        height: 80%;
+    }
+
+    .text{
+        order: 2;
+        width: 65%;
+        margin-left: 15%;
+        margin-top: 0;
+    }
+
+    .text h1 {
+        font-size: 20px;
+        line-height: 40px;
+    }
+
+    .text h4 {
+        font-size: 12px;
+        line-height: 30px;
+    }
+
+    .buttons{
+        order: 3;
+        margin-left: 10%;
+        width: 100%;
+    }
+
+    .buttons h3{
+        font-size: 14px;
+        
+    }
+    .cont-footer{
+        order: 4;
+        grid-column: span 1;
+        margin-top: 20%;
+    }
+}
+
+
+
+@media screen and (min-width: 485px) and (max-width: 768px){
+
+    .menu{
+        margin: 4% 0 0 8%;
+        padding: 0;
+    }
+
+    .container{
+        grid-template-columns: 1fr;
+    }
+
+    .img{
+        order: 1;
+        grid-row: span 1;
+        text-align: center;
+        
+    }
+
+    .img img{
+        width: 80%;
+        height: 80%;
+    }
+
+    .text{
+        order: 2;
+        width: 65%;
+        margin-left: 15%;
+        margin-top: 0;
+    }
+
+    .text h1 {
+        font-size: 20px;
+        line-height: 40px;
+    }
+
+    .text h4 {
+        font-size: 12px;
+        line-height: 30px;
+    }
+
+    .buttons{
+        order: 3;
+
+    }
+
+    .cont-footer{
+        order: 4;
+        grid-column: span 1;
+        margin-top: 20%;
+    }
+
+}   
+
+
+@media screen and (min-width: 768px) and (max-width: 1435px) {
+
+    .menu{
+        margin: 1% 0 0 1%;
+        padding: 2% 0 0 2%;
+    }
+
+    .text{
+        width: 75%;
+        margin-left: 14%;
+        margin-top: 15%;
+    }
+
+    .text h1 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .text h4 {
+        font-size: 15px;
+        line-height: 30px;
+    }
+
+    .img img{
+        width: 100%;
+        height: 60%;
+    }
+
+    .creditos{
+        font-size: 14px;
+    }
+
 }
