@@ -257,7 +257,7 @@ strong{
 
     .buttons{
         order: 3;
-        margin-left: 10%;
+        margin: 0 0 10% 10%;
         width: 100%;
     }
 
