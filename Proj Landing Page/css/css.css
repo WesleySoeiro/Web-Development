@@ -318,9 +318,8 @@ strong{
     }
 
     .cont-footer{
-        order: 4;
-        grid-column: span 1;
         bottom: 0;
+        margin-top: 60%;
     }
 
 }   
