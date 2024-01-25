@@ -6,6 +6,10 @@
     max-height: 750px;
 }
 
+.empty{
+    display:none;
+}
+
 :root{
     --black: #000000;
     --azul: #22D4FD;
