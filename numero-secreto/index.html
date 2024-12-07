@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Número Secreto</title>
+</head>
+<body>
+    <h1>Acerte o número secreto</h1>
+
+    <h3>O numero secreto está entre <span id="menor_valor">0</span> e <span id="maior_valor">100</span></h3>
+
+    <div id="chute" class="mensagem">
+    <div class="box_div">
+                <div class="box1">Você disse:
+                <span class="box" id="palpite"> -  -  </span></div>
+                <div class="box2">Suas Chances: 
+                <span class="box_chance"> -  -  </span></div>
+    </div>
+    <div class="dica"></div>
+        <div class="btns">
+        <div class="btn"> <button id="btn_chutar">Chutar</button></div>
+        <div class="btn"> <button id="btn_reiniciar">Reiniciar</button></div>
+        </div>
+        
+        
+    </div>
+
+    <script src="app/sorteio.js"></script>
+    <script src="app/validar.js" defer ></script>
+    <script src="app/voice_api.js" defer ></script>
+
+</body>
+</html>

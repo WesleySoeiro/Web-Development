@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --font-family: "Montserrat", sans-serif;
+    --primary-color: #235952;
+    --bg-color: #FFEBD9;
+    --bg-hover-color: #f7e5d6;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+    font-family: var(--font-family);
+}
+
+h1 {
+    font-size: 4em;
+}
+
+h3 {
+    font-size: 2em;
+    margin: 1em 0 1em 0;
+}
+
+.mensagem {
+    font-size: 2.5em;
+}
+
+.span {
+    margin-bottom: 1.2em;
+}
+
+.box_div {
+    display: inline;
+    margin-top: 1em;
+    padding: 1em;
+}
+
+.dica {
+    margin-top: 0.5em;
+}
+
+.box1 {
+    margin-bottom: 2em;
+}
+
+.box,
+.box_chance {
+    border: 2px solid var(--primary-color);
+    border-radius: 20%;
+    padding: 0.25em;
+    font-size: 1.5em;
+}
+
+.btns {
+    margin: 0.5em;
+    
+}
+
+.btns-vit {
+    margin-top: 1em;
+    padding: 0.5;
+}
+
+.btn {
+    display: inline-block;
+    font-size: 2em;
+    padding: 0 0.2em;
+    margin-bottom: 0.3em;
+}
+
+#btn_chutar,
+#btn_reiniciar {
+    font-size: 0.5em;
+    padding: 0.7em 1.5em;
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    border-radius: 15%;
+}
+
+#btn_reiniciar {
+    padding: 0.7em 0.5em;
+}
+
+#btn_reiniciar:hover,
+#btn_chutar:hover {
+    background-color: var(--bg-hover-color);
+    cursor: pointer;
+}
+
+.fa-solid  {
+    padding: 0 0 0 0.5em;
+}
+
+#hide,
+.hide{
+    display: none;
+}
